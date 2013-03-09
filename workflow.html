@@ -1,0 +1,30 @@
+<!--
+ * Copyright (c) 2012 Research In Motion Limited.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ *
+ * You may obtain a copy of the License at:
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+
+<div data-bb-type="screen" data-bb-effect="fade">
+	<script type="text/javascript" src="js/hub.js"></script>
+
+	<div data-bb-type="title" data-bb-caption=" goWorkFlow " ></div>
+	<br/>
+
+	<div data-bb-type="round-panel"> 
+	    <div data-bb-type="panel-header">Initiate WorkFlow</div>
+	    <div data-bb-type="button" data-bb-img="img/ic_select.png" onclick="hubNotify.send('Travel Expense','expense')">Travel Expense</div>
+	    <div data-bb-type="button" data-bb-img="img/rim.png" onclick="hubNotify.send('Vacation Request', 'vacation')"> &nbsp;Vacation Requests</div><br/>
+	    <div data-bb-type="button" data-bb-img="img/cog.png" onclick="blackberry.app.exit()"> &nbsp;Exit Application</div>
+	</div>
+</div>
