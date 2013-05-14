@@ -4,26 +4,33 @@
 
 var hubNotify = {
 
-	send : function( title, type ) {
+	send : function(title, type) {
 		var options = '';
 		if (type == 'expense') {
-			options = {				
-				body : '<u>WorkFlow Expense Request</u><br/><br/>Please approve my expense for:<br/><br/>$1349.32<br><br><b>-Employee ABC</b>',
-				target : 'com.goworkflow',
+			options = {
+				body : "WorkFlow - Expense Request\n\n\nExpense $1349.32,\nEmployee: Sebastian Barthelmess\n\n\n\nopen to approve / deny...",
+				target : 'waa.goWorkflow.open',
 				targetAction : 'bb.action.OPEN',
-				payload : 'Expense, 1349.32, Employee ABC',
-				payloadType : 'text/html'
-			}			
+				payload : window.btoa('Travel Expense, 1349.32, Employee ABC'),
+				payloadType : 'text/plain'
+			}
 		} else if (type == 'vacation') {
 			options = {
-				body : '<u>WorkFlow Vacation Request</u><br/><br/>Please approve my vacation from:<br/><br/><b>Mon 11/21/2013</b> through<br/><b>Fri 11/24/2013</b>. <br><br><b>-Employee CBA</b>',
-				target : 'com.goworkflow',
+				body : "WorkFlow - Vacation Request\n\n\nEmployee CBA\nRequesting 2 weeks off in December.\n\n\n\nopen to approve / deny...",
+				target : 'waa.goWorkflow.open',
 				targetAction : 'bb.action.OPEN',
-				payload : 'Vacation, date1: monday, date2: friday, Employee CBA',
-				payloadType : 'text/html'
+				payload : window.btoa('Vacation, date1: monday, date2: friday, Employee CBA'),
+				payloadType : 'text/plain'
 			}
 		} else {
-			alert('Error!');
+			options = {
+				body : 'WorkFlow - WebApp Integration',
+				target : "sys.browser",
+				targetAction : "bb.action.OPEN",
+				payloadType : "text/html",
+				payloadURI : "http://lmgtfy.com?q=BlackBerry%Live!%"
+			}
+
 		}
 
 		/* Create a new notiication and fire it off */

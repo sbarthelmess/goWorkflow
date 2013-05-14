@@ -22,27 +22,38 @@
 
 		<title>goWorkFlow</title>
 
-		<link type="text/css" rel="stylesheet" href="css/bbui.css" />
+		<link type="text/css" rel="stylesheet" href="css/bbui.working.css" />
 	</head>
 	<body>
 		<script type="text/javascript" src="local:///chrome/webworks.js"></script>
 		<script type="text/javascript" src="js/bbui.js"></script>
-		
+
 		<script type="text/javascript">
+			function onInvoked(onInvokedInfo) {
+				if (onInvokedInfo.data) {
+					var data = atob(onInvokedInfo.data);
+					if (data.indexOf("Vacation") == 0) {
+						bb.pushScreen('vacation.html', 'vacation');
+					} else if (data.indexOf("Travel") == 0) {
+						bb.pushScreen('travel.html', 'travel');
+					}
+				}
+			}
+			
 			function onwebworksready() {
-				// Just for fun make this app invokable too!
-				blackberry.event.addEventListener('invoked', function(onInvokedInfo) {
-						alert(onInvokedInfo);
-				});
+				// Let it begin!
 				bb.init();
 				bb.pushScreen('workflow.html', 'workflow');
+				blackberry.event.addEventListener('invoked', onInvoked);
 			}
+
 			function onload() {
 				window.removeEventListener('load', onload, false);
 				document.addEventListener('webworksready', onwebworksready, false);
 			}
+
 			window.addEventListener('load', onload, false);
 		</script>
-		
+
 	</body>
 </html>

@@ -24,9 +24,6 @@ body, html {
 	overflow:visible;
 	user-select: none;
 	-webkit-user-select: none;
-	background-color: black;
-	text: white;
-	color: white;
 }
 
 @-webkit-keyframes bbUI-fade-in 
@@ -105,8 +102,7 @@ body, html {
 	left:0px;
 	bottom:0px;
 	right: 0px;
-	background: url('../img/carbon.jpg') no-repeat;
-	webkit-background-size: 100%;
+	background-color: white;
 }
 
 .bb-bb10-1280x768-1280x720-screen {
@@ -116,8 +112,7 @@ body, html {
 	left:0px;
 	bottom:0px;
 	right: 0px;
-	background: url('../img/carbon.jpg') no-repeat;
-	webkit-background-size: 100%;
+	background-color: white;
 }
 
 .bb-bb10-720x720-screen {
@@ -126,9 +121,8 @@ body, html {
 	top:0px;
 	left:0px;
 	bottom:0px;
-	right: 0px;
-	background: url('../img/carbon.jpg') no-repeat;
-	webkit-background-size: 100%;
+	right: 0px;	
+	background-color: white;
 }
 
 .bb-transition-overlay
@@ -170,7 +164,6 @@ body, html {
 	z-index:1002;
 	height: 100px;
 	top: -104px;
-	opacity: .8;
 }   
 
 .pb-menu-bar ul {
@@ -1744,7 +1737,6 @@ body, html {
 	border-bottom-color: #CECECE;
 	border-left-color: #C3C3C3;
 	border-right-color: #C4C4C4;
-	opacity: .8;
 }
 
 .bb-bb10-button-container-dark
@@ -1753,7 +1745,6 @@ body, html {
 	color: white;
 	border-color: #333333;
 	display:inline-block;
-	opacity: .8;
 }
 
 .bb-bb10-button {
@@ -1762,8 +1753,7 @@ body, html {
 	white-space:nowrap;
 	vertical-align: middle;
 	display: block;
-	background-clip: padding-box;
-	opacity: .8
+	background-clip: padding-box;	
 }
 
 .bb-bb10-button-light {
