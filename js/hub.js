@@ -28,7 +28,7 @@ var hubNotify = {
 				target : "sys.browser",
 				targetAction : "bb.action.OPEN",
 				payloadType : "text/html",
-				payloadURI : "http://lmgtfy.com?q=BlackBerry%Live!%"
+				payloadURI : "http://m.usatoday.com"
 			}
 
 		}

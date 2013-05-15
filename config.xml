@@ -19,7 +19,7 @@
 
 <widget xmlns="http://www.w3.org/ns/widgets"
         xmlns:rim="http://www.blackberry.com/ns/widgets"
-        version="1.2.2"
+        version="1.2.3"
         id="goWorkFlow"
         xml:lang="en">
 
